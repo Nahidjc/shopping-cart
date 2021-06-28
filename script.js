@@ -23,7 +23,7 @@ function item1Calculation(positive) {
         } else {
             totalCalculation(price);
         }
-        // console.log(`Quantity: ${quantity} Price: ${price} Amount ${quantity * price}`);
+
     }
 
 }
@@ -57,7 +57,7 @@ function item2Calculation(positive) {
         } else {
             totalCalculation(price);
         }
-        //console.log(`Quantity: ${quantity} Price: ${price} Amount ${quantity * price}`);
+
     }
 
 
@@ -69,6 +69,9 @@ function totalCalculation(price) {
     tax = getInteger(document.getElementById("tax").innerText)
     totalTax = ((subtotal + price) * 0.05).toFixed(2);
     document.getElementById("tax").innerText = totalTax;
+    totalAmount = (subtotal + price) + getInteger(totalTax);
+    document.getElementById("total").innerText = totalAmount;
+    console.log(totalAmount);
 }
 
 
@@ -78,5 +81,14 @@ function updateItem(itemId, quantity, price) {
 }
 
 function getInteger(value) {
-    return parseInt(value);
+    return parseFloat(value);
 }
+
+document.getElementById("removeItem2").addEventListener('click', function () {
+    let parentItem = document.getElementById("itemswrapper");
+    let childItem = document.getElementById("item2");
+    let removeAmount = getInteger(document.getElementById("priceOfItem2").innerText);
+    totalCalculation(-1 * removeAmount);
+    parentItem.removeChild(childItem);
+
+})
