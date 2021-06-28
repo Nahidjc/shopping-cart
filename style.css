@@ -72,9 +72,13 @@ body {
 	background-color: #F8F9FA;
 	padding: 50px 50px;
 	margin-top: 100px;
+	display: none;
 }
 
-.orderDetails {
+
+
+#orderDetails {
+	display: none;
 	background-color: #F8F9FA;
 	padding: 50px 50px;
 	margin-top: 100px;

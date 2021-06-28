@@ -78,7 +78,7 @@
             </div>
          </div>
       </div>
-      <div class="form-section container">
+      <div class="form-section container" id="formPortion">
 
          <h1>Fill Deliver Details</h1>
 
@@ -102,11 +102,11 @@
                <input placeholder="Enter your Present Address" id="pAddress" class="form-control" type="text"
                   name="pAddress">
             </div>
-            <div class="btn btn-success">Submit And Confirm</div>
+            <div id="submitButton" class="btn btn-success">Submit And Confirm</div>
          </form>
 
       </div>
-      <div class="orderDetails container">
+      <div class="container" id="orderDetails">
 
          <h3 class="text-success text-center">Your Order is Confirmed</h3>
          <h4 class="text-center">Order Details</h4>
@@ -117,7 +117,7 @@
          <h5>Customer Email :</h5>
          <h5>Delivery Address :</h5>
 
-         <div class="card text-center order-summery">
+         <div class="card mt-5 order-summery">
             <div class="card-header">
                Order Summery
             </div>
@@ -132,7 +132,43 @@
                      </tr>
                   </thead>
                   <tbody>
+                     <tr>
+                        <td>iPhone 11 128GB Black</td>
+                        <td>$1219</td>
+                        <td id="setQuantityItem1"></td>
+                        <td>$<span id="setAmountItem1">1219</span></td>
+                     </tr>
+                     <tr>
+                        <td>iPhone 11 Silicone Case - Black</td>
+                        <td>$59</td>
+                        <td id="setQuantityItem2"></td>
+                        <td>$<span id="setAmountItem2">59</span></td>
 
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td>SubTotal</td>
+                        <td>
+                           $ <span id="setSubTotal">1222</span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Tax</td>
+                        <td>$
+                           <span id="setTax">1222</span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Total</td>
+                        <td>$
+                           <span id="setTotal">1655</span>
+                        </td>
+                     </tr>
                   </tbody>
                </table>
             </div>
