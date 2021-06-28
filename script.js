@@ -84,6 +84,15 @@ function getInteger(value) {
     return parseFloat(value);
 }
 
+document.getElementById("removeItem1").addEventListener('click', function () {
+    let parentItem = document.getElementById("itemswrapper");
+    let childItem = document.getElementById("item1");
+    let removeAmount = getInteger(document.getElementById("priceOfItem1").innerText);
+    totalCalculation(-1 * removeAmount);
+    parentItem.removeChild(childItem);
+
+})
+
 document.getElementById("removeItem2").addEventListener('click', function () {
     let parentItem = document.getElementById("itemswrapper");
     let childItem = document.getElementById("item2");
@@ -91,4 +100,8 @@ document.getElementById("removeItem2").addEventListener('click', function () {
     totalCalculation(-1 * removeAmount);
     parentItem.removeChild(childItem);
 
+})
+
+document.getElementById("checkoutbtn").addEventListener('click', function () {
+    parentItem = document.getElementById("shoppingcart").style.display = "none";
 })
